@@ -51,3 +51,8 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # Customize to your needs...
 unsetopt correct
 cd ~/github.com
+
+if [ $commands[kubectl] ]; then
+  source <(kubectl completion zsh)
+fi
+
